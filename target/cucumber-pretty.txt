@@ -1,0 +1,71 @@
+
+@tag @Login_button_Apperance
+Scenario: Verification of Login button on home Page # Features/HomePage.feature:24
+  Given Chrome is Opened                            # com.stepdefinition.redirectionTest.chrome_is_opened()
+  When User is on WebPage                           # com.stepdefinition.redirectionTest.user_is_on_web_page()
+  Then Login button is Visible                      # com.stepdefinition.redirectionTest.login_button_is_visible()
+
+@tag @Redirection_to_Home_Page
+Scenario: Redirection to Home Page on Clicking on the Header or Title on the Page # Features/HomePage.feature:30
+  Given website is opened                                                         # com.stepdefinition.redirectionTest.website_is_opened()
+  When click on the logo on the Home Page                                         # com.stepdefinition.redirectionTest.click_on_the_logo_on_the_home_page()
+  Then Redirect to the Home Page                                                  # com.stepdefinition.redirectionTest.redirect_to_the_home_page()
+
+@tag @Redirection_to_menu_page
+Scenario: Redirection to Respective Section on Clicking on the Menu Option. # Features/HomePage.feature:37
+  Given HomePage is opened                                                  # com.stepdefinition.redirectionTest.home_page_is_opened()
+  When click on the menu options on Home Page                               # com.stepdefinition.redirectionTest.click_on_the_menu_options_on_home_page()
+  Then Redirect to the Respective Page                                      # com.stepdefinition.redirectionTest.redirect_to_the_respective_page()
+
+@tag @Search_medicine
+Scenario: Search Medicine                       # Features/buymedicine.feature:24
+  Given website is upon running                 # com.stepdefinition.redirectionTest.website_is_upon_running()
+  And navigate to medicines page                # com.stepdefinition.redirectionTest.navigate_to_medicines_page()
+  When user type on Search box                  # com.stepdefinition.redirectionTest.user_type_on_search_box()
+  And user click on Search button               # com.stepdefinition.redirectionTest.user_click_on_search_button()
+  Then list of Searched Products should display # com.stepdefinition.redirectionTest.list_of_searched_products_should_display()
+
+@tag @add_medicine_to_cart
+Scenario: Adding Medicine to the Cart    # Features/buymedicine.feature:32
+  Given search Medicine is done          # com.stepdefinition.redirectionTest.search_medicine_is_done()
+  When User click on add to cart button  # com.stepdefinition.redirectionTest.user_click_on_add_to_cart_button()
+  Then Medicine Successfully add to cart # com.stepdefinition.redirectionTest.medicine_successfully_add_to_cart()
+
+@tag @adding_or_deleting_the_quantity_in_cart
+Scenario: Updating the Cart                                # Features/buymedicine.feature:38
+  Given Medicine is added to the Cart                      # com.stepdefinition.redirectionTest.medicine_is_added_to_the_cart()
+  When user click on adding or deleting                    # com.stepdefinition.redirectionTest.user_click_on_adding_or_deleting()
+  Then quantity of products need to be updated in the cart # com.stepdefinition.redirectionTest.quantity_of_products_need_to_be_updated_in_the_cart()
+
+@tag @place_order
+Scenario: Place order for Medicine      # Features/buymedicine.feature:44
+  Given add the medicines to the cart   # com.stepdefinition.redirectionTest.add_the_medicines_to_the_cart()
+  When User click on the Proceed button # com.stepdefinition.redirectionTest.user_click_on_the_proceed_button()
+  And User Select the Prescription type # com.stepdefinition.redirectionTest.user_select_the_prescription_type()
+  And User click on proceed button      # com.stepdefinition.redirectionTest.user_click_on_proceed_button()
+  Then Payment options Page should come # com.stepdefinition.redirectionTest.payment_options_page_should_come()
+
+@tag @valid_login_with_valid_credentials
+Scenario: Check login is successful with valid credentials� # Features/login.feature:25
+  Given browser is open                                     # com.stepdefinition.redirectionTest.browser_is_open()
+  And User is on login page                                 # com.stepdefinition.redirectionTest.user_is_on_login_page()
+  When user enters phone number                             # com.stepdefinition.redirectionTest.user_enters_phone_number()
+  And click on get otp                                      # com.stepdefinition.redirectionTest.click_on_get_otp()
+  And user clicks on login page                             # com.stepdefinition.redirectionTest.user_clicks_on_login_page()
+  Then user is navigated to user profile                    # com.stepdefinition.redirectionTest.user_is_navigated_to_user_profile()
+
+@tag @valid_login_with_invalid_credentials
+Scenario: Check login with invalid phone number� # Features/login.feature:34
+  Given user is in website                       # com.stepdefinition.redirectionTest.user_is_in_website()
+  And User is on login page invalid              # com.stepdefinition.redirectionTest.user_is_on_login_page_invalid()
+  When user enters invalid phone number          # com.stepdefinition.redirectionTest.user_enters_invalid_phone_number()
+  Then user is not able click on get OTP button  # com.stepdefinition.redirectionTest.user_is_not_able_click_on_get_otp_button()
+
+@tag @valid_login_with_invalid_otp
+Scenario: Check login with invalid otp            # Features/login.feature:41
+  Given browser is ready                          # com.stepdefinition.redirectionTest.browser_is_ready()
+  And User is on login                            # com.stepdefinition.redirectionTest.user_is_on_login()
+  When user enters phone number invalid           # com.stepdefinition.redirectionTest.user_enters_phone_number_invalid()
+  And user press on login button                  # com.stepdefinition.redirectionTest.user_press_on_login_button()
+  And user enters wrong otp                       # com.stepdefinition.redirectionTest.user_enters_wrong_otp()
+  Then user is not able to click on login button. # com.stepdefinition.redirectionTest.user_is_not_able_to_click_on_login_button()
