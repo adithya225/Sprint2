@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>8/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Mar 21 19:46:42 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>153 seconds (153177 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.runner.apolloRunner.Scenario()'><b>Scenario</b><br>Test class: com.runner.apolloRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Check login with invalid phone number?", "Optional[Login Functionality]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[3]/div[3]/div/div/div/form/div[2]/button/span[1]/span&quot;}
+  (Session info: chrome=99.0.4844.82)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;LIN24011000&apos;, ip: &apos;192.168.45.244&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aac1824de0c1b8821625ca49f1d52922, findElement {using=xpath, value=/html/body/div[3]/div[3]/div/div/div/form/div[2]/button/span[1]/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\avadlamo\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63719}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63719/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: aac1824de0c1b8821625ca49f1d52922
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at com.stepdefinition.redirectionTest.user_is_not_able_click_on_get_otp_button(redirectionTest.java:375)
+	at ?.user is not able click on get OTP button(file:///C:/Users/avadlamo/eclipse-workspace/sprint2/Features/login.feature:38)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace476709123", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace476709123'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[3]/div[3]/div/div/div/form/div[2]/button/span[1]/span&quot;}
+  (Session info: chrome=99.0.4844.82)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;LIN24011000&apos;, ip: &apos;192.168.45.244&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aac1824de0c1b8821625ca49f1d52922, findElement {using=xpath, value=/html/body/div[3]/div[3]/div/div/div/form/div[2]/button/span[1]/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\avadlamo\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63719}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63719/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: aac1824de0c1b8821625ca49f1d52922
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at com.stepdefinition.redirectionTest.user_is_not_able_click_on_get_otp_button(redirectionTest.java:375)
+	at ?.user is not able click on get OTP button(file:///C:/Users/avadlamo/eclipse-workspace/sprint2/Features/login.feature:38)
+</pre></div></td>
+<td>10</td>
+<td>com.runner.apolloRunner@27406a17</td></tr>
+<tr>
+<td title='com.runner.apolloRunner.Scenario()'><b>Scenario</b><br>Test class: com.runner.apolloRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Check login is successful with valid credentials?", "Optional[Login Functionality]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.stepdefinition.redirectionTest.user_is_navigated_to_user_profile(redirectionTest.java:342)
+	at ?.user is navigated to user profile(file:///C:/Users/avadlamo/eclipse-workspace/sprint2/Features/login.feature:31)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1829651877", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1829651877'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.stepdefinition.redirectionTest.user_is_navigated_to_user_profile(redirectionTest.java:342)
+	at ?.user is navigated to user profile(file:///C:/Users/avadlamo/eclipse-workspace/sprint2/Features/login.feature:31)
+</pre></div></td>
+<td>25</td>
+<td>com.runner.apolloRunner@27406a17</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.runner.apolloRunner.Scenario()'><b>Scenario</b><br>Test class: com.runner.apolloRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Redirection to Home Page on Clicking on the Header or Title on the Page", "Optional[Home Page Functionality]"</td>
+<td></td>
+<td>9</td>
+<td>com.runner.apolloRunner@27406a17</td></tr>
+<tr>
+<td title='com.runner.apolloRunner.Scenario()'><b>Scenario</b><br>Test class: com.runner.apolloRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Verification of Login button on home Page", "Optional[Home Page Functionality]"</td>
+<td></td>
+<td>6</td>
+<td>com.runner.apolloRunner@27406a17</td></tr>
+<tr>
+<td title='com.runner.apolloRunner.Scenario()'><b>Scenario</b><br>Test class: com.runner.apolloRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Redirection to Respective Section on Clicking on the Menu Option.", "Optional[Home Page Functionality]"</td>
+<td></td>
+<td>9</td>
+<td>com.runner.apolloRunner@27406a17</td></tr>
+<tr>
+<td title='com.runner.apolloRunner.Scenario()'><b>Scenario</b><br>Test class: com.runner.apolloRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Place order for Medicine", "Optional[Purchase Medicine]"</td>
+<td></td>
+<td>20</td>
+<td>com.runner.apolloRunner@27406a17</td></tr>
+<tr>
+<td title='com.runner.apolloRunner.Scenario()'><b>Scenario</b><br>Test class: com.runner.apolloRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Check login with invalid otp", "Optional[Login Functionality]"</td>
+<td></td>
+<td>29</td>
+<td>com.runner.apolloRunner@27406a17</td></tr>
+<tr>
+<td title='com.runner.apolloRunner.Scenario()'><b>Scenario</b><br>Test class: com.runner.apolloRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Search Medicine", "Optional[Purchase Medicine]"</td>
+<td></td>
+<td>11</td>
+<td>com.runner.apolloRunner@27406a17</td></tr>
+<tr>
+<td title='com.runner.apolloRunner.Scenario()'><b>Scenario</b><br>Test class: com.runner.apolloRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Updating the Cart", "Optional[Purchase Medicine]"</td>
+<td></td>
+<td>17</td>
+<td>com.runner.apolloRunner@27406a17</td></tr>
+<tr>
+<td title='com.runner.apolloRunner.Scenario()'><b>Scenario</b><br>Test class: com.runner.apolloRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Adding Medicine to the Cart", "Optional[Purchase Medicine]"</td>
+<td></td>
+<td>12</td>
+<td>com.runner.apolloRunner@27406a17</td></tr>
+</table><p>
+</body>
+</html>
