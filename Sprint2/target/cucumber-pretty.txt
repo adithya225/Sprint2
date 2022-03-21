@@ -1,0 +1,82 @@
+
+@tag @tag1
+Scenario: Invalid length of input less than lowerbound.   # Features/AddressDetails.feature:23
+  Given home page opened                                  # com.stepdefination.MedicineBook.home_page_opened()
+  And user enters the medicine details                    # com.stepdefination.MedicineBook.user_enters_the_medicine_details()
+  When user enters pincode of length less than six digits # com.stepdefination.MedicineBook.user_enters_pincode_of_length_less_than_six_digits()
+      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[9]/div[3]/div/div/div[1]/div/input"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'INLEN8520029330', ip: '192.168.29.144', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ff93cd1a43fdbdeefaca60994c9ba851, findElement {using=xpath, value=/html/body/div[9]/div[3]/div/div/div[1]/div/input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\adprasad\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53853}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53853/devtoo..., se:cdpVersion: 99.0.4844.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ff93cd1a43fdbdeefaca60994c9ba851
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at com.stepdefination.MedicineBook.user_enters_pincode_of_length_less_than_six_digits(MedicineBook.java:126)
+	at ✽.user enters pincode of length less than six digits(file:///C:/Users/adprasad/eclipse-workspace/Sprint2/Features/AddressDetails.feature:26)
+
+  Then error message displayed                            # com.stepdefination.MedicineBook.error_message_displayed()
+
+@tag @tag2
+Scenario: Invalid length of input less than upperbound.      # Features/AddressDetails.feature:30
+  Given homepage is opened                                   # com.stepdefination.MedicineBook.homepage_is_opened()
+  And user enters the cart details                           # com.stepdefination.MedicineBook.user_enters_the_cart_details()
+  When user enters pincode of length greater than six digits # com.stepdefination.MedicineBook.user_enters_pincode_of_length_greater_than_six_digits()
+  Then error is displayed                                    # com.stepdefination.MedicineBook.error_is_displayed()
+
+@tag @tag3
+Scenario: Pincode input is unavailable to service in that area  # Features/AddressDetails.feature:37
+  Given user is in chorme website                               # com.stepdefination.MedicineBook.user_is_in_chorme_website()
+  And user enters the order details                             # com.stepdefination.MedicineBook.user_enters_the_order_details()
+  When user enters unavailable pincode services on address form # com.stepdefination.MedicineBook.user_enters_unavailable_pincode_services_on_address_form()
+  Then error displayed                                          # com.stepdefination.MedicineBook.error_displayed()
+
+@tag @tag4
+Scenario: Valid entry of pincode                        # Features/AddressDetails.feature:44
+  Given user is logged-in in the website                # com.stepdefination.MedicineBook.user_is_logged_in_in_the_website()
+  And user enters the details of medicine               # com.stepdefination.MedicineBook.user_enters_the_details_of_medicine()
+  When user enters valid pincode length on address form # com.stepdefination.MedicineBook.user_enters_valid_pincode_length_on_address_form()
+  Then the address details is saved                     # com.stepdefination.MedicineBook.the_address_details_is_saved()
+
+@tag @valid_login_with_valid_credentials
+Scenario: Check login is successful with valid credentials # Features/BookMedicine.feature:23
+  Given homepage is open                                   # com.stepdefination.MedicineBook.homepage_is_open()
+  When user enters phone number                            # com.stepdefination.MedicineBook.user_enters_phone_number()
+  Then sucessful login                                     # com.stepdefination.MedicineBook.sucessful_login()
+
+@tag @tag1
+Scenario: Adding multiple medicine to Cart # Features/BookMedicine.feature:29
+  Given user is in homepage                # com.stepdefination.MedicineBook.user_is_in_homepage()
+  And user is on Pharmacy page             # com.stepdefination.MedicineBook.user_is_on_pharmacy_page()
+  And user selects a Category              # com.stepdefination.MedicineBook.user_selects_a_category()
+  When user clicks on Add to Cart          # com.stepdefination.MedicineBook.user_clicks_on_add_to_cart()
+  Then products are added to the Cart      # com.stepdefination.MedicineBook.products_are_added_to_the_cart()
+
+@tag @tag2
+Scenario: Remove medicine to Cart              # Features/BookMedicine.feature:37
+  Given website is open                        # com.stepdefination.MedicineBook.website_is_open()
+  When user clicks on Remove from Cart in cart # com.stepdefination.MedicineBook.user_clicks_on_remove_from_cart_in_cart()
+  Then product is removed from the Cart        # com.stepdefination.MedicineBook.product_is_removed_from_the_cart()
+
+@tag @tag3
+Scenario: Updation of medicine quantity            # Features/BookMedicine.feature:43
+  Given user is in the website                     # com.stepdefination.MedicineBook.user_is_in_the_website()
+  When user increments or decrements items in cart # com.stepdefination.MedicineBook.user_increments_or_decrements_items_in_cart()
+  Then number of items in cart is altered          # com.stepdefination.MedicineBook.number_of_items_in_cart_is_altered()
