@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="11" time="623.65">
+    <testcase classname="Access User Appointments List" name="Valid Results for User Appointment" time="45.683">
+        <system-out><![CDATA[Given user is logged in.....................................................passed
+And Appointment page is accessed............................................passed
+Then all booked Appointments will be visible................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Access User Appointments List" name="Error message for empty User Appointment list" time="46.305">
+        <system-out><![CDATA[Given user is logged in.....................................................passed
+And Appointment page is accessed............................................passed
+Then error message is displayed when no history.............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Book Appointment" name="Check valid status of Doctor is available" time="6.687">
+        <system-out><![CDATA[Given user can view Doctors List............................................passed
+Then valid status is availability...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Book Appointment" name="Profile Redirection on selecting Doctor profile" time="23.145">
+        <system-out><![CDATA[Given Doctor is available...................................................passed
+And user can click on profile...............................................passed
+Then user is redirected to doctor profile...................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Book Appointment" name="User redirection to Appointment page" time="43.824">
+        <system-out><![CDATA[Given user has selected a Doctor............................................passed
+And book appointment button is clicked......................................passed
+And user is logged-in.......................................................passed
+Then user can view appointment form.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Book Appointment" name="Display of valid timeslot" time="44.135">
+        <system-out><![CDATA[Given appointment form is accessable........................................passed
+Then user can view all valid timeslot.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Book Appointment" name="Display of invalid timeslot" time="44.385">
+        <system-out><![CDATA[Given appointment form is accessable........................................passed
+Then user cannot view all invalid timeslot..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Book Appointment" name="Display of valid dates" time="56.041">
+        <system-out><![CDATA[Given appointment form is accessable........................................passed
+And valid dates are available...............................................passed
+Then user can view all valid dates..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Book Appointment" name="Display of invalid dates" time="45.072">
+        <system-out><![CDATA[Given appointment form is accessable........................................passed
+And invalid dates are available.............................................passed
+Then user can view all invalid dates........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Book Appointment" name="Disabled Book button when timeslot is not selected" time="205.901">
+        <system-out><![CDATA[Given user is loggedin......................................................passed
+And appointment form is accessable..........................................passed
+But timeslot is not selected................................................passed
+Then Book button is Disabled................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Book Appointment" name="Enabled Book button on valid entry" time="62.172">
+        <system-out><![CDATA[Given user is loggedin......................................................passed
+And appointment form is accessable..........................................passed
+And user selected valid dates and timeslots.................................passed
+Then Book button is Enabled.................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

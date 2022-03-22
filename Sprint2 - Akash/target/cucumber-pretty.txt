@@ -1,0 +1,55 @@
+
+Scenario: Valid Results for User Appointment   # Features/Appointment_List.feature:3
+  Given user is logged in                      # com.StepDefinitions.Appointment_List.user_is_logged_in()
+  And Appointment page is accessed             # com.StepDefinitions.Appointment_List.appointment_page_is_accessed()
+  Then all booked Appointments will be visible # com.StepDefinitions.Appointment_List.all_booked_appointments_will_be_visible()
+
+Scenario: Error message for empty User Appointment list # Features/Appointment_List.feature:8
+  Given user is logged in                               # com.StepDefinitions.Appointment_List.user_is_logged_in()
+  And Appointment page is accessed                      # com.StepDefinitions.Appointment_List.appointment_page_is_accessed()
+  Then error message is displayed when no history       # com.StepDefinitions.Appointment_List.error_message_is_displayed_when_no_history()
+
+Scenario: Check valid status of Doctor is available # Features/Book_Appointment.feature:3
+  Given user can view Doctors List                  # com.StepDefinitions.Book_Appointment.user_can_view_doctors_list()
+  Then valid status is availability                 # com.StepDefinitions.Book_Appointment.valid_status_is_availability()
+
+Scenario: Profile Redirection on selecting Doctor profile # Features/Book_Appointment.feature:8
+  Given Doctor is available                               # com.StepDefinitions.Book_Appointment.doctor_is_available()
+  And user can click on profile                           # com.StepDefinitions.Book_Appointment.user_can_click_on_profile()
+  Then user is redirected to doctor profile               # com.StepDefinitions.Book_Appointment.user_is_redirected_to_doctor_profile()
+
+Scenario: User redirection to Appointment page # Features/Book_Appointment.feature:15
+  Given user has selected a Doctor             # com.StepDefinitions.Book_Appointment.user_has_selected_a_doctor()
+  And book appointment button is clicked       # com.StepDefinitions.Book_Appointment.book_appointment_button_is_clicked()
+  And user is logged-in                        # com.StepDefinitions.Book_Appointment.user_is_logged_in()
+  Then user can view appointment form          # com.StepDefinitions.Book_Appointment.user_can_view_appointment_form()
+
+Scenario: Display of valid timeslot     # Features/Book_Appointment.feature:22
+  Given appointment form is accessable  # com.StepDefinitions.Book_Appointment.appointment_form_is_accessable()
+  Then user can view all valid timeslot # com.StepDefinitions.Book_Appointment.user_can_view_all_valid_timeslot()
+
+Scenario: Display of invalid timeslot        # Features/Book_Appointment.feature:27
+  Given appointment form is accessable       # com.StepDefinitions.Book_Appointment.appointment_form_is_accessable()
+  Then user cannot view all invalid timeslot # com.StepDefinitions.Book_Appointment.user_cannot_view_all_invalid_timeslot()
+
+Scenario: Display of valid dates       # Features/Book_Appointment.feature:33
+  Given appointment form is accessable # com.StepDefinitions.Book_Appointment.appointment_form_is_accessable()
+  And valid dates are available        # com.StepDefinitions.Book_Appointment.valid_dates_are_available()
+  Then user can view all valid dates   # com.StepDefinitions.Book_Appointment.user_can_view_all_valid_dates()
+
+Scenario: Display of invalid dates     # Features/Book_Appointment.feature:39
+  Given appointment form is accessable # com.StepDefinitions.Book_Appointment.appointment_form_is_accessable()
+  And invalid dates are available      # com.StepDefinitions.Book_Appointment.invalid_dates_are_available()
+  Then user can view all invalid dates # com.StepDefinitions.Book_Appointment.user_can_view_all_invalid_dates()
+
+Scenario: Disabled Book button when timeslot is not selected # Features/Book_Appointment.feature:45
+  Given user is loggedin                                     # com.StepDefinitions.Book_Appointment.user_is_loggedin()
+  And appointment form is accessable                         # com.StepDefinitions.Book_Appointment.appointment_form_is_accessable()
+  But timeslot is not selected                               # com.StepDefinitions.Book_Appointment.timeslot_is_not_selected()
+  Then Book button is Disabled                               # com.StepDefinitions.Book_Appointment.book_button_is_disabled()
+
+Scenario: Enabled Book button on valid entry  # Features/Book_Appointment.feature:53
+  Given user is loggedin                      # com.StepDefinitions.Book_Appointment.user_is_loggedin()
+  And appointment form is accessable          # com.StepDefinitions.Book_Appointment.appointment_form_is_accessable()
+  And user selected valid dates and timeslots # com.StepDefinitions.Book_Appointment.user_selected_valid_dates_and_timeslots()
+  Then Book button is Enabled                 # com.StepDefinitions.Book_Appointment.book_button_is_enabled()
