@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="93.141">
+    <testcase classname="Book Test" name="Validate appearance of valid tests" time="7.306">
+        <failure message="expected:&lt;...//www.apollo247.com/[lab-tests]&gt; but was:&lt;...//www.apollo247.com/[]&gt;" type="org.junit.ComparisonFailure">
+            <![CDATA[Given Website is accessible.................................................passed
+And User can access Lab Test Page...........................................passed
+Then Valid Lab Tests appear.................................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<...//www.apollo247.com/[lab-tests]> but was:<...//www.apollo247.com/[]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.stepdefinition.labtest.valid_lab_tests_appear(labtest.java:33)
+	at ✽.Valid Lab Tests appear(file:///C:/Users/royab/eclipse-workspace/Sprint_2/Features/BookTest.feature:26)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Book Test" name="Validate addition of test to cart" time="5.048">
+        <failure message="element click intercepted: Element &lt;button id=&quot;wzrk-cancel&quot; class=&quot;No thanks&quot;&gt;...&lt;/button&gt; is not clickable at point (744, 464). Other element would receive the click: &lt;iframe scrolling=&quot;no&quot; id=&quot;wiz-iframe-intent&quot; style=&quot;z-index: 2147483647; display:block; height: 100% !important; width: 100% !important;min-height:80px !important;border:0px !important; border-color:none !important;&quot;&gt;&lt;/iframe&gt;&#10;  (Session info: chrome=99.0.4844.82)&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'DESKTOP-G2E4LVH', ip: '192.168.29.59', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [ae4f49e9f33d58517864efc81d198f0b, clickElement {id=253a009a-4179-44d5-aad6-a3293d3424cc}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\royab\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60882/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (ae4f49e9f33d58517864efc81d198f0b)] -&gt; xpath: //*[@id=&quot;wzrk-cancel&quot;]]&#10;Session ID: ae4f49e9f33d58517864efc81d198f0b" type="org.openqa.selenium.ElementClickInterceptedException">
+            <![CDATA[Given Website is accessible.................................................failed
+And User can access Lab Test Page...........................................skipped
+And User is logged in.......................................................skipped
+When User clicks Add to cart................................................skipped
+Then Test is added to cart..................................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button id="wzrk-cancel" class="No thanks">...</button> is not clickable at point (744, 464). Other element would receive the click: <iframe scrolling="no" id="wiz-iframe-intent" style="z-index: 2147483647; display:block; height: 100% !important; width: 100% !important;min-height:80px !important;border:0px !important; border-color:none !important;"></iframe>
+  (Session info: chrome=99.0.4844.82)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-G2E4LVH', ip: '192.168.29.59', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ae4f49e9f33d58517864efc81d198f0b, clickElement {id=253a009a-4179-44d5-aad6-a3293d3424cc}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\royab\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60882/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (ae4f49e9f33d58517864efc81d198f0b)] -> xpath: //*[@id="wzrk-cancel"]]
+Session ID: ae4f49e9f33d58517864efc81d198f0b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.stepdefinition.labtest.website_is_accessible(labtest.java:19)
+	at ✽.Website is accessible(file:///C:/Users/royab/eclipse-workspace/Sprint_2/Features/BookTest.feature:30)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Book Test" name="Validate addition of recommended test to cart" time="33.5">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;mainContainerCT&quot;]/div[3]/div[1]/p&quot;}&#10;  (Session info: chrome=99.0.4844.82)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'DESKTOP-G2E4LVH', ip: '192.168.29.59', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [2294a1a7335b6f268a528eb151ea0f84, findElement {using=xpath, value=//*[@id=&quot;mainContainerCT&quot;]/div[3]/div[1]/p}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\royab\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60946}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60946/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 2294a1a7335b6f268a528eb151ea0f84" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given Website is accessible.................................................passed
+And User can access Lab Test Page...........................................passed
+And User is logged in.......................................................passed
+When User clicks on Add to cart.............................................failed
+And User clicks on View Details.............................................skipped
+Then User can add recommended test to cart..................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="mainContainerCT"]/div[3]/div[1]/p"}
+  (Session info: chrome=99.0.4844.82)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-G2E4LVH', ip: '192.168.29.59', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2294a1a7335b6f268a528eb151ea0f84, findElement {using=xpath, value=//*[@id="mainContainerCT"]/div[3]/div[1]/p}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\royab\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60946}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60946/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2294a1a7335b6f268a528eb151ea0f84
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at com.stepdefinition.labtest.user_clicks_on_add_to_cart(labtest.java:94)
+	at ✽.User clicks on Add to cart(file:///C:/Users/royab/eclipse-workspace/Sprint_2/Features/BookTest.feature:41)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Book Test" name="Validate removal of test from cart" time="47.076">
+        <failure message="chrome not reachable&#10;  (Session info: chrome=99.0.4844.82)&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'DESKTOP-G2E4LVH', ip: '192.168.29.59', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [cb20f201067f92e4036ff59222cd2e5b, findElement {using=xpath, value=//*[@id=&quot;mainContainerCT&quot;]/div[2]/div[2]/div/div[2]/ul[1]/li[1]/div[2]/div[2]/button/span[1]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\royab\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61025}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61025/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: cb20f201067f92e4036ff59222cd2e5b" type="org.openqa.selenium.WebDriverException">
+            <![CDATA[Given Website is accessible.................................................passed
+And User can access Lab Test Page...........................................passed
+And User is logged in.......................................................passed
+When User clicks on remove test.............................................failed
+Then Test is removed from cart..............................................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=99.0.4844.82)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-G2E4LVH', ip: '192.168.29.59', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cb20f201067f92e4036ff59222cd2e5b, findElement {using=xpath, value=//*[@id="mainContainerCT"]/div[2]/div[2]/div/div[2]/ul[1]/li[1]/div[2]/div[2]/button/span[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\royab\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61025}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61025/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cb20f201067f92e4036ff59222cd2e5b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at com.stepdefinition.labtest.user_clicks_on_remove_test(labtest.java:81)
+	at ✽.User clicks on remove test(file:///C:/Users/royab/eclipse-workspace/Sprint_2/Features/BookTest.feature:50)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
