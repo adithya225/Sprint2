@@ -1,270 +1,54 @@
 
-@tag @tag1
-Scenario: Valid results of Consultation records till date for the logged-in profile                     # Features/DoctorConsultationRecords.feature:5
-  Given User is logged-in for Valid results of Consultation records till date for the logged-in profile # com.steps.RedirectionTest.user_is_logged_in_for_valid_results_of_consultation_records_till_date_for_the_logged_in_profile()
-  And Health Records page is accessible                                                                 # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                           # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects Doctor Consultations                                                                      # com.steps.RedirectionTest.selects_doctor_consultations()
-  Then all the previous Doctor Consultations records are displayed                                      # com.steps.RedirectionTest.all_the_previous_doctor_consultations_records_are_displayed()
-
-@tag @tag2
-Scenario: Validate error message in case of No data available                    # Features/DoctorConsultationRecords.feature:13
-  Given User is logged-in to Validate error message in case of No data available # com.steps.RedirectionTest.user_is_logged_in_to_validate_error_message_in_case_of_no_data_available()
-  And Health Records page is accessible                                          # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                    # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects Doctor Consultations                                               # com.steps.RedirectionTest.selects_doctor_consultations()
-  Then No Data Available is displayed !!!                                        # com.steps.RedirectionTest.no_data_available_is_displayed()
-
-@tag @tag3
-Scenario: Validate the redirection to a particular Consultation record                    # Features/DoctorConsultationRecords.feature:21
-  Given User is logged-in to Validate the redirection to a particular Consultation record # com.steps.RedirectionTest.user_is_logged_in_to_validate_the_redirection_to_a_particular_consultation_record()
-  And Health Records page is accessible                                                   # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                             # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Doctor Consultations                                         # com.steps.RedirectionTest.selects_a_record_under_doctor_consultations()
-  Then the page is redirected to detailed consultation page for that particular record    # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_consultation_page_for_that_particular_record()
-
-@tag @tag4
-Scenario: Check the details of a particular Consultation record                    # Features/DoctorConsultationRecords.feature:29
-  Given User is logged-in to Check the details of a particular Consultation record # com.steps.RedirectionTest.user_is_logged_in_to_check_the_details_of_a_particular_consultation_record()
-  And Health Records page is accessible                                            # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                      # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Doctor Consultations                                  # com.steps.RedirectionTest.selects_a_record_under_doctor_consultations()
-  Then the page is redirected to the consultation page for that particular record  # com.steps.RedirectionTest.the_page_is_redirected_to_the_consultation_page_for_that_particular_record()
-  And all the details for that record are displayed                                # com.steps.RedirectionTest.all_the_details_for_that_record_are_displayed()
+@tag @valid_login_with_valid_credentials
+Scenario: Check login is successful with valid credentials # Features/BookMedicine.feature:23
+  Given homepage is open                                   # com.stepdefination.MedicineBook.homepage_is_open()
+  When user enters phone number                            # com.stepdefination.MedicineBook.user_enters_phone_number()
+  Then sucessful login                                     # com.stepdefination.MedicineBook.sucessful_login()
 
 @tag @tag1
-Scenario: Valid results of Billing records till date for the logged-in profile                     # Features/HealthBillRecords.feature:5
-  Given User is logged-in for Valid results of Billing records till date for the logged-in profile # com.steps.RedirectionTest.user_is_logged_in_for_valid_results_of_billing_records_till_date_for_the_logged_in_profile()
-  And Health Records page is accessible                                                            # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                      # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects Bills                                                                                # com.steps.RedirectionTest.selects_bills()
-  Then all the previous Bills are displayed                                                        # com.steps.RedirectionTest.all_the_previous_bills_are_displayed()
+Scenario: Adding multiple medicine to Cart # Features/BookMedicine.feature:29
+  Given user is in homepage                # com.stepdefination.MedicineBook.user_is_in_homepage()
+  And user is on Pharmacy page             # com.stepdefination.MedicineBook.user_is_on_pharmacy_page()
+  And user selects a Category              # com.stepdefination.MedicineBook.user_selects_a_category()
+  When user clicks on Add to Cart          # com.stepdefination.MedicineBook.user_clicks_on_add_to_cart()
+  Then products are added to the Cart      # com.stepdefination.MedicineBook.products_are_added_to_the_cart()
 
 @tag @tag2
-Scenario: Validate error message in case of No data available                                        # Features/HealthBillRecords.feature:13
-  Given User is logged-in to Validate error message in case of No data available for Billing Records # com.steps.RedirectionTest.user_is_logged_in_to_validate_error_message_in_case_of_no_data_available_for_billing_records()
-  And Health Records page is accessible                                                              # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                        # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects Bills                                                                                  # com.steps.RedirectionTest.selects_bills()
-  Then No Data Available is displayed !!!                                                            # com.steps.RedirectionTest.no_data_available_is_displayed()
+Scenario: Remove medicine to Cart              # Features/BookMedicine.feature:37
+  Given website is open                        # com.stepdefination.MedicineBook.website_is_open()
+  When user clicks on Remove from Cart in cart # com.stepdefination.MedicineBook.user_clicks_on_remove_from_cart_in_cart()
+  Then product is removed from the Cart        # com.stepdefination.MedicineBook.product_is_removed_from_the_cart()
 
 @tag @tag3
-Scenario: Validate the redirection to a particular Bill                    # Features/HealthBillRecords.feature:21
-  Given User is logged-in to Validate the redirection to a particular Bill # com.steps.RedirectionTest.user_is_logged_in_to_validate_the_redirection_to_a_particular_bill()
-  And Health Records page is accessible                                    # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                              # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Bills                                         # com.steps.RedirectionTest.selects_a_record_under_bills()
-  Then the page is redirected to detailed page for that particular bill    # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_bill()
-
-@tag @tag4
-Scenario: Check the details of a particular Bill                        # Features/HealthBillRecords.feature:29
-  Given User is logged-in to Check the details of a particular Bill     # com.steps.RedirectionTest.user_is_logged_in_to_check_the_details_of_a_particular_bill()
-  And Health Records page is accessible                                 # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                           # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Bills                                      # com.steps.RedirectionTest.selects_a_record_under_bills()
-  Then the page is redirected to detailed page for that particular bill # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_bill()
-  And all the details for that bill are displayed                       # com.steps.RedirectionTest.all_the_details_for_that_bill_are_displayed()
-
-@tag @tag5
-Scenario: Validate redirection to Bills page from a particular record                    # Features/HealthBillRecords.feature:38
-  Given User is logged-in to Validate redirection to Bills page from a particular record # com.steps.RedirectionTest.user_is_logged_in_to_validate_redirection_to_bills_page_from_a_particular_record()
-  And Health Records page is accessible                                                  # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                            # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Bills                                                       # com.steps.RedirectionTest.selects_a_record_under_bills()
-  Then the page is redirected to detailed page for that particular record                # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_record()
-  And all the details for that record are displayed                                      # com.steps.RedirectionTest.all_the_details_for_that_record_are_displayed()
-  Then click on Back button                                                              # com.steps.RedirectionTest.click_on_back_button()
-  And the page is redirected to Bills page                                               # com.steps.RedirectionTest.the_page_is_redirected_to_bills_page()
+Scenario: Updation of medicine quantity            # Features/BookMedicine.feature:43
+  Given user is in the website                     # com.stepdefination.MedicineBook.user_is_in_the_website()
+  When user increments or decrements items in cart # com.stepdefination.MedicineBook.user_increments_or_decrements_items_in_cart()
+  Then number of items in cart is altered          # com.stepdefination.MedicineBook.number_of_items_in_cart_is_altered()
 
 @tag @tag1
-Scenario: Valid results of Health Condition records till date for the logged-in profile                     # Features/HealthConditionRecords.feature:5
-  Given User is logged-in for Valid results of Health Condition records till date for the logged-in profile # com.steps.RedirectionTest.user_is_logged_in_for_valid_results_of_health_condition_records_till_date_for_the_logged_in_profile()
-  And Health Records page is accessible                                                                     # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                               # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects Health Conditions                                                                             # com.steps.RedirectionTest.selects_health_conditions()
-  Then all the previous Health Conditions records are displayed                                             # com.steps.RedirectionTest.all_the_previous_health_conditions_records_are_displayed()
+Scenario: Invalid length of input less than lowerbound.   # Features/PincodeDetails.feature:23
+  Given home page opened                                  # com.stepdefination.MedicineBook.home_page_opened()
+  And user enters the medicine details                    # com.stepdefination.MedicineBook.user_enters_the_medicine_details()
+  When user enters pincode of length less than six digits # com.stepdefination.MedicineBook.user_enters_pincode_of_length_less_than_six_digits()
+  Then error message displayed                            # com.stepdefination.MedicineBook.error_message_displayed()
 
 @tag @tag2
-Scenario: Validate error message in case of No data available                                                 # Features/HealthConditionRecords.feature:13
-  Given User is logged-in to Validate error message in case of No data available for Health Condition records # com.steps.RedirectionTest.user_is_logged_in_to_validate_error_message_in_case_of_no_data_available_for_health_condition_records()
-  And Health Records page is accessible                                                                       # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                                 # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects Health Conditions                                                                               # com.steps.RedirectionTest.selects_health_conditions()
-  Then No Data Available is displayed !!!                                                                     # com.steps.RedirectionTest.no_data_available_is_displayed()
-      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h3[contains(text(),'No data available !!!')] (tried for 60 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'INLEN8520029331', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\aknanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58304/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c14fe1f07d0f586fee6a256b30f7ee7b
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.steps.RedirectionTest.no_data_available_is_displayed(RedirectionTest.java:86)
-	at ✽.No Data Available is displayed !!!(file:///C:/Users/aknanda/eclipse-workspace/Sprint2/Features/HealthConditionRecords.feature:18)
-
+Scenario: Invalid length of input less than upperbound.      # Features/PincodeDetails.feature:30
+  Given homepage is opened                                   # com.stepdefination.MedicineBook.homepage_is_opened()
+  And user enters the cart details                           # com.stepdefination.MedicineBook.user_enters_the_cart_details()
+  When user enters pincode of length greater than six digits # com.stepdefination.MedicineBook.user_enters_pincode_of_length_greater_than_six_digits()
+  Then error is displayed                                    # com.stepdefination.MedicineBook.error_is_displayed()
 
 @tag @tag3
-Scenario: Validate the redirection to a particular Health Condition record                               # Features/HealthConditionRecords.feature:21
-  Given User is logged-in to Validate the redirection to a particular Health Condition record            # com.steps.RedirectionTest.user_is_logged_in_to_validate_the_redirection_to_a_particular_health_condition_record()
-  And Health Records page is accessible                                                                  # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                            # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Health Conditions                                                           # com.steps.RedirectionTest.selects_a_record_under_health_conditions()
-  Then the page is redirected to detailed page for that particular record under Health Condition Records # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_record_under_health_condition_records()
+Scenario: Pincode input is unavailable to service in that area  # Features/PincodeDetails.feature:37
+  Given user is in chorme website                               # com.stepdefination.MedicineBook.user_is_in_chorme_website()
+  And user enters the order details                             # com.stepdefination.MedicineBook.user_enters_the_order_details()
+  When user enters unavailable pincode services on address form # com.stepdefination.MedicineBook.user_enters_unavailable_pincode_services_on_address_form()
+  Then error displayed                                          # com.stepdefination.MedicineBook.error_displayed()
 
 @tag @tag4
-Scenario: Check the details of a particular Health Condition record                    # Features/HealthConditionRecords.feature:29
-  Given User is logged-in to Check the details of a particular Health Condition record # com.steps.RedirectionTest.user_is_logged_in_to_check_the_details_of_a_particular_health_condition_record()
-  And Health Records page is accessible                                                # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                          # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Health Conditions                                         # com.steps.RedirectionTest.selects_a_record_under_health_conditions()
-  Then the page is redirected to detailed page for that particular record              # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_record()
-  And all the details for that record are displayed                                    # com.steps.RedirectionTest.all_the_details_for_that_record_are_displayed()
-
-@tag @tag5
-Scenario: Validate redirection to Health Conditions page from a particular record                    # Features/HealthConditionRecords.feature:38
-  Given User is logged-in to Validate redirection to Health Conditions page from a particular record # com.steps.RedirectionTest.user_is_logged_in_to_validate_redirection_to_health_conditions_page_from_a_particular_record()
-  And Health Records page is accessible                                                              # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                        # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Health Conditions                                                       # com.steps.RedirectionTest.selects_a_record_under_health_conditions()
-  Then the page is redirected to detailed page for that particular record                            # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_record()
-  And all the details for that record are displayed                                                  # com.steps.RedirectionTest.all_the_details_for_that_record_are_displayed()
-  Then click on Back button                                                                          # com.steps.RedirectionTest.click_on_back_button()
-  And the page is redirected to Health Conditions page                                               # com.steps.RedirectionTest.the_page_is_redirected_to_health_conditions_page()
-
-@tag @tag1
-Scenario: Valid results of Hospitalization records till date for the logged-in profile                     # Features/HospitalizationRecords.feature:5
-  Given User is logged-in for Valid results of Hospitalization records till date for the logged-in profile # com.steps.RedirectionTest.user_is_logged_in_for_valid_results_of_hospitalization_records_till_date_for_the_logged_in_profile()
-  And Health Records page is accessible                                                                    # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                              # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-      org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a title="View Health Records" href="">...</a> is not clickable at point (411, 457). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
-  (Session info: chrome=99.0.4844.82)
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'INLEN8520029331', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e1d7b75d3576a2b44e6d2c460fd3e134, clickElement {id=9a635c58-4f71-44d4-8eca-276e030937ce}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\aknanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58738}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58738/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (e1d7b75d3576a2b44e6d2c460fd3e134)] -> css selector: [title="View Health Records"]]
-Session ID: e1d7b75d3576a2b44e6d2c460fd3e134
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at com.steps.RedirectionTest.the_user_clicks_on_view_health_records(RedirectionTest.java:50)
-	at ✽.the user clicks on View Health Records(file:///C:/Users/aknanda/eclipse-workspace/Sprint2/Features/HospitalizationRecords.feature:8)
-
-  And selects Hospitalization                                                                              # com.steps.RedirectionTest.selects_hospitalization()
-  Then all the previous Hospitalization records are displayed                                              # com.steps.RedirectionTest.all_the_previous_hospitalization_records_are_displayed()
-
-@tag @tag2
-Scenario: Validate error message in case of No data available                                                  # Features/HospitalizationRecords.feature:13
-  Given User is logged-in to Validate error message in case of No data available under Hospitalization records # com.steps.RedirectionTest.user_is_logged_in_to_validate_error_message_in_case_of_no_data_available_under_hospitalization_records()
-  And Health Records page is accessible                                                                        # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                                  # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects Hospitalization                                                                                  # com.steps.RedirectionTest.selects_hospitalization()
-  Then No Data Available is displayed !!!                                                                      # com.steps.RedirectionTest.no_data_available_is_displayed()
-
-@tag @tag3
-Scenario: Validate the redirection to a particular Hospitalization record                               # Features/HospitalizationRecords.feature:21
-  Given User is logged-in to Validate the redirection to a particular Hospitalization record            # com.steps.RedirectionTest.user_is_logged_in_to_validate_the_redirection_to_a_particular_hospitalization_record()
-  And Health Records page is accessible                                                                 # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                           # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Hospitalization                                                            # com.steps.RedirectionTest.selects_a_record_under_hospitalization()
-  Then the page is redirected to detailed page for that particular record under Hospitalization records # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_record_under_hospitalization_records()
-
-@tag @tag4
-Scenario: Check the details of a particular Hospitalization record                    # Features/HospitalizationRecords.feature:29
-  Given User is logged-in to Check the details of a particular Hospitalization record # com.steps.RedirectionTest.user_is_logged_in_to_check_the_details_of_a_particular_hospitalization_record()
-  And Health Records page is accessible                                               # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                         # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Hospitalization                                          # com.steps.RedirectionTest.selects_a_record_under_hospitalization()
-  Then the page is redirected to detailed page for that particular record             # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_record()
-  And all the details for that record are displayed                                   # com.steps.RedirectionTest.all_the_details_for_that_record_are_displayed()
-
-@tag @tag5
-Scenario: Validate redirection to Hospitalization page from a particular record                    # Features/HospitalizationRecords.feature:38
-  Given User is logged-in to Validate redirection to Hospitalization page from a particular record
-  And Health Records page is accessible                                                            # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                      # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Hospitalization                                                       # com.steps.RedirectionTest.selects_a_record_under_hospitalization()
-  Then the page is redirected to detailed page for that particular record                          # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_record()
-  And all the details for that record are displayed                                                # com.steps.RedirectionTest.all_the_details_for_that_record_are_displayed()
-  Then click on Back button                                                                        # com.steps.RedirectionTest.click_on_back_button()
-  And the page is redirected to Hospitalization page                                               # com.steps.RedirectionTest.the_page_is_redirected_to_hospitalization_page()
-
-@tag @tag1
-Scenario: Valid results of Insurance records till date for the logged-in profile                     # Features/InsuranceRecords.feature:5
-  Given User is logged-in for Valid results of Insurance records till date for the logged-in profile # com.steps.RedirectionTest.user_is_logged_in_for_valid_results_of_insurance_records_till_date_for_the_logged_in_profile()
-  And Health Records page is accessible                                                              # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                        # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects Insurance                                                                              # com.steps.RedirectionTest.selects_insurance()
-  Then all the previous Insurance Bills are displayed                                                # com.steps.RedirectionTest.all_the_previous_insurance_bills_are_displayed()
-
-@tag @tag2
-Scenario: Validate error message in case of No data available                                            # Features/InsuranceRecords.feature:13
-  Given User is logged-in to Validate error message in case of No data available under Insurance Records # com.steps.RedirectionTest.user_is_logged_in_to_validate_error_message_in_case_of_no_data_available_under_insurance_records()
-  And Health Records page is accessible                                                                  # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                            # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects Insurance                                                                                  # com.steps.RedirectionTest.selects_insurance()
-  Then No Data Available is displayed !!!                                                                # com.steps.RedirectionTest.no_data_available_is_displayed()
-
-@tag @tag3
-Scenario: Validate the redirection to a particular Insurance                        # Features/InsuranceRecords.feature:21
-  Given User is logged-in to Validate the redirection to a particular Insurance     # com.steps.RedirectionTest.user_is_logged_in_to_validate_the_redirection_to_a_particular_insurance()
-  And Health Records page is accessible                                             # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                       # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Insurance                                              # com.steps.RedirectionTest.selects_a_record_under_insurance()
-  Then the page is redirected to detailed page for that particular Insurance report # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_insurance_report()
-
-@tag @tag4
-Scenario: Check the details of a particular Insurance report                        # Features/InsuranceRecords.feature:29
-  Given User is logged-in to Check the details of a particular Insurance report     # com.steps.RedirectionTest.user_is_logged_in_to_check_the_details_of_a_particular_insurance_report()
-  And Health Records page is accessible                                             # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                       # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-  And selects a record under Insurance                                              # com.steps.RedirectionTest.selects_a_record_under_insurance()
-  Then the page is redirected to detailed page for that particular Insurance report # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_insurance_report()
-  And all the details for that Insurance are displayed                              # com.steps.RedirectionTest.all_the_details_for_that_insurance_are_displayed()
-
-@tag @tag5
-Scenario: Validate redirection to Insurance page from a particular record                    # Features/InsuranceRecords.feature:38
-  Given User is logged-in to Validate redirection to Insurance page from a particular record # com.steps.RedirectionTest.user_is_logged_in_to_validate_redirection_to_insurance_page_from_a_particular_record()
-  And Health Records page is accessible                                                      # com.steps.RedirectionTest.health_records_page_is_accessible()
-  When the user clicks on View Health Records                                                # com.steps.RedirectionTest.the_user_clicks_on_view_health_records()
-      org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a title="View Health Records" href="">...</a> is not clickable at point (411, 457). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
-  (Session info: chrome=99.0.4844.82)
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'INLEN8520029331', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9cc4a8e75a4978b181fd63e1a2dfb0ce, clickElement {id=4fef3162-b98e-49e6-be26-814de4aa1388}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\aknanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:59522}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59522/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (9cc4a8e75a4978b181fd63e1a2dfb0ce)] -> css selector: [title="View Health Records"]]
-Session ID: 9cc4a8e75a4978b181fd63e1a2dfb0ce
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at com.steps.RedirectionTest.the_user_clicks_on_view_health_records(RedirectionTest.java:50)
-	at ✽.the user clicks on View Health Records(file:///C:/Users/aknanda/eclipse-workspace/Sprint2/Features/InsuranceRecords.feature:41)
-
-  And selects a record under Insurance                                                       # com.steps.RedirectionTest.selects_a_record_under_insurance()
-  Then the page is redirected to detailed page for that particular record                    # com.steps.RedirectionTest.the_page_is_redirected_to_detailed_page_for_that_particular_record()
-  And all the details for that record are displayed                                          # com.steps.RedirectionTest.all_the_details_for_that_record_are_displayed()
-  Then click on Back button                                                                  # com.steps.RedirectionTest.click_on_back_button()
-  And the page is redirected to Insurance page                                               # com.steps.RedirectionTest.the_page_is_redirected_to_insurance_page()
+Scenario: Valid entry of pincode                        # Features/PincodeDetails.feature:44
+  Given user is logged-in in the website                # com.stepdefination.MedicineBook.user_is_logged_in_in_the_website()
+  And user enters the details of medicine               # com.stepdefination.MedicineBook.user_enters_the_details_of_medicine()
+  When user enters valid pincode length on address form # com.stepdefination.MedicineBook.user_enters_valid_pincode_length_on_address_form()
+  Then the address details is saved                     # com.stepdefination.MedicineBook.the_address_details_is_saved()

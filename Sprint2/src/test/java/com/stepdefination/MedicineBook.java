@@ -82,33 +82,63 @@ public class MedicineBook {
 	}
 
 	@Given("website is open")
-	public void website_is_open() {
-
+	public void website_is_open() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\adprasad\\OneDrive - Capgemini\\Desktop\\Selenium\\drive\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.navigate().to("https://www.apollo247.com/");
+		// driver.manage().window().maximize();
+		driver.findElement(By.xpath("//*[@id=\"wzrk-cancel\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"fixedHeaderCT\"]/div/header/div[4]/div[1]/a[2]/span[2]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"wzrk-cancel\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"mainContainerCT\"]/div[1]/div[2]/ul/li[2]/a")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div[2]/div[2]/div[4]/div[1]/div/div[2]/button"))
+				.click();
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/div/div/div/div/div[2]/button[2]")).click();
 	}
 
 	@When("user clicks on Remove from Cart in cart")
-	public void user_clicks_on_remove_from_cart_in_cart() {
+	public void user_clicks_on_remove_from_cart_in_cart() throws InterruptedException {
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//img[@title='Remove item from Cart']")).click();
 
 	}
 
 	@Then("product is removed from the Cart")
 	public void product_is_removed_from_the_cart() {
-
+		System.out.println("The product is removed");
+		driver.quit();
 	}
 
 	@Given("user is in the website")
-	public void user_is_in_the_website() {
-
+	public void user_is_in_the_website() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\adprasad\\OneDrive - Capgemini\\Desktop\\Selenium\\drive\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.navigate().to("https://www.apollo247.com/");
+		// driver.manage().window().maximize();
+		driver.findElement(By.xpath("//*[@id=\"wzrk-cancel\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"fixedHeaderCT\"]/div/header/div[4]/div[1]/a[2]/span[2]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"wzrk-cancel\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"mainContainerCT\"]/div[1]/div[2]/ul/li[2]/a")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div[2]/div[2]/div[4]/div[1]/div/div[2]/button"))
+				.click();
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/div/div/div/div/div[2]/button[2]")).click();
 	}
 
 	@When("user increments or decrements items in cart")
-	public void user_increments_or_decrements_items_in_cart() {
-
+	public void user_increments_or_decrements_items_in_cart() throws InterruptedException {
+		Thread.sleep(2000);
 	}
 
 	@Then("number of items in cart is altered")
 	public void number_of_items_in_cart_is_altered() {
-
+		System.out.println("The product is altered");
+		driver.quit();
 	}
 
 	// Address details
@@ -147,8 +177,8 @@ public class MedicineBook {
 
 	@Then("error message displayed")
 	public void error_message_displayed() {
-	 System.out.println("Invalid pincode input");
-	 driver.quit();
+		System.out.println("Invalid pincode input");
+		driver.quit();
 	}
 
 	@Given("homepage is opened")
@@ -186,8 +216,8 @@ public class MedicineBook {
 
 	@Then("error is displayed")
 	public void error_is_displayed() {
-		 System.out.println("Invalid pincode input");
-		 driver.quit();
+		System.out.println("Invalid pincode input");
+		driver.quit();
 	}
 
 	@Given("user is in chorme website")
@@ -220,13 +250,13 @@ public class MedicineBook {
 		driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div[1]/div/input")).sendKeys("123456");
 		driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div[2]/button")).click();
 		Thread.sleep(5000);
-		
+
 	}
 
 	@Then("error displayed")
 	public void error_displayed() {
 		System.out.println("Pincode out of service");
-		 driver.quit();
+		driver.quit();
 	}
 
 	@Given("user is logged-in in the website")
@@ -258,13 +288,14 @@ public class MedicineBook {
 		// Thread.sleep(10000);
 		driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div[1]/div/input")).sendKeys("734301");
 		driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div[2]/button")).click();
-		
+
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//button[@title='Login to continue']")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[@name=\"mobileNumber\"]")).sendKeys("9832691563");
 		driver.findElement(By.xpath("//*[@class=\"MuiButtonBase-root MuiFab-root MuiFab-primary\"]")).click();
 		Thread.sleep(5000);
+		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//*[@class=\"MuiButtonBase-root MuiFab-root MuiFab-primary\"]")));
@@ -275,7 +306,7 @@ public class MedicineBook {
 	public void the_address_details_is_saved() throws InterruptedException {
 		System.out.println("Address saved");
 		driver.quit();
-		
+
 	}
 
 }
