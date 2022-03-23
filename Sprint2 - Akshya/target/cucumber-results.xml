@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="24" time="703.096">
+<testcase classname="Previous Doctor Consultation Records" name="Valid results of Consultation records till date for the logged-in profile" time="29.1">
+<system-out><![CDATA[Given User is logged-in for Valid results of Consultation records till date for the logged-in profile.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects Doctor Consultations............................................passed
+Then all the previous Doctor Consultations records are displayed............passed
+]]></system-out>
+</testcase>
+<testcase classname="Previous Doctor Consultation Records" name="Validate error message in case of No data available" time="29.379">
+<system-out><![CDATA[Given User is logged-in to Validate error message in case of No data available.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects Doctor Consultations............................................passed
+Then No Data Available is displayed !!!.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Previous Doctor Consultation Records" name="Validate the redirection to a particular Consultation record" time="27.355">
+<system-out><![CDATA[Given User is logged-in to Validate the redirection to a particular Consultation record.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Doctor Consultations.............................passed
+Then the page is redirected to detailed consultation page for that particular record.passed
+]]></system-out>
+</testcase>
+<testcase classname="Previous Doctor Consultation Records" name="Check the details of a particular Consultation record" time="27.213">
+<system-out><![CDATA[Given User is logged-in to Check the details of a particular Consultation record.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Doctor Consultations.............................passed
+Then the page is redirected to the consultation page for that particular record.passed
+And all the details for that record are displayed...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Billing Records" name="Valid results of Billing records till date for the logged-in profile" time="26.695">
+<system-out><![CDATA[Given User is logged-in for Valid results of Billing records till date for the logged-in profile.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects Bills...........................................................passed
+Then all the previous Bills are displayed...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Billing Records" name="Validate error message in case of No data available" time="28.573">
+<system-out><![CDATA[Given User is logged-in to Validate error message in case of No data available for Billing Records.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects Bills...........................................................passed
+Then No Data Available is displayed !!!.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Billing Records" name="Validate the redirection to a particular Bill" time="27.853">
+<system-out><![CDATA[Given User is logged-in to Validate the redirection to a particular Bill....passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Bills............................................passed
+Then the page is redirected to detailed page for that particular bill.......passed
+]]></system-out>
+</testcase>
+<testcase classname="Billing Records" name="Check the details of a particular Bill" time="26.961">
+<system-out><![CDATA[Given User is logged-in to Check the details of a particular Bill...........passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Bills............................................passed
+Then the page is redirected to detailed page for that particular bill.......passed
+And all the details for that bill are displayed.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Billing Records" name="Validate redirection to Bills page from a particular record" time="27.758">
+<system-out><![CDATA[Given User is logged-in to Validate redirection to Bills page from a particular record.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Bills............................................passed
+Then the page is redirected to detailed page for that particular record.....passed
+And all the details for that record are displayed...........................passed
+Then click on Back button...................................................passed
+And the page is redirected to Bills page....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Health Conditions Records" name="Valid results of Health Condition records till date for the logged-in profile" time="28.726">
+<system-out><![CDATA[Given User is logged-in for Valid results of Health Condition records till date for the logged-in profile.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects Health Conditions...............................................passed
+Then all the previous Health Conditions records are displayed...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Health Conditions Records" name="Validate error message in case of No data available" time="88.373">
+<failure message="Expected condition failed: waiting for visibility of element located by By.xpath: //h3[contains(text(),'No data available !!!')] (tried for 60 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'INLEN8520029331', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\aknanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58304/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c14fe1f07d0f586fee6a256b30f7ee7b" type="org.openqa.selenium.TimeoutException"><![CDATA[Given User is logged-in to Validate error message in case of No data available for Health Condition records.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects Health Conditions...............................................passed
+Then No Data Available is displayed !!!.....................................failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h3[contains(text(),'No data available !!!')] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'INLEN8520029331', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\aknanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58304/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c14fe1f07d0f586fee6a256b30f7ee7b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.steps.RedirectionTest.no_data_available_is_displayed(RedirectionTest.java:86)
+	at ✽.No Data Available is displayed !!!(file:///C:/Users/aknanda/eclipse-workspace/Sprint2/Features/HealthConditionRecords.feature:18)
+]]></failure>
+</testcase>
+<testcase classname="Health Conditions Records" name="Validate the redirection to a particular Health Condition record" time="27.963">
+<system-out><![CDATA[Given User is logged-in to Validate the redirection to a particular Health Condition record.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Health Conditions................................passed
+Then the page is redirected to detailed page for that particular record under Health Condition Records.passed
+]]></system-out>
+</testcase>
+<testcase classname="Health Conditions Records" name="Check the details of a particular Health Condition record" time="29.181">
+<system-out><![CDATA[Given User is logged-in to Check the details of a particular Health Condition record.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Health Conditions................................passed
+Then the page is redirected to detailed page for that particular record.....passed
+And all the details for that record are displayed...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Health Conditions Records" name="Validate redirection to Health Conditions page from a particular record" time="28.349">
+<system-out><![CDATA[Given User is logged-in to Validate redirection to Health Conditions page from a particular record.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Health Conditions................................passed
+Then the page is redirected to detailed page for that particular record.....passed
+And all the details for that record are displayed...........................passed
+Then click on Back button...................................................passed
+And the page is redirected to Health Conditions page........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Hospitalization Records" name="Valid results of Hospitalization records till date for the logged-in profile" time="26.831">
+<failure message="element click intercepted: Element &lt;a title=&quot;View Health Records&quot; href=&quot;&quot;&gt;...&lt;/a&gt; is not clickable at point (411, 457). Other element would receive the click: &lt;div aria-hidden=&quot;true&quot; style=&quot;z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;&quot;&gt;&lt;/div&gt;&#10;  (Session info: chrome=99.0.4844.82)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'INLEN8520029331', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [e1d7b75d3576a2b44e6d2c460fd3e134, clickElement {id=9a635c58-4f71-44d4-8eca-276e030937ce}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\aknanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58738}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58738/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (e1d7b75d3576a2b44e6d2c460fd3e134)] -&gt; css selector: [title=&quot;View Health Records&quot;]]&#10;Session ID: e1d7b75d3576a2b44e6d2c460fd3e134" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given User is logged-in for Valid results of Hospitalization records till date for the logged-in profile.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................failed
+And selects Hospitalization.................................................skipped
+Then all the previous Hospitalization records are displayed.................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a title="View Health Records" href="">...</a> is not clickable at point (411, 457). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=99.0.4844.82)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'INLEN8520029331', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e1d7b75d3576a2b44e6d2c460fd3e134, clickElement {id=9a635c58-4f71-44d4-8eca-276e030937ce}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\aknanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58738}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58738/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e1d7b75d3576a2b44e6d2c460fd3e134)] -> css selector: [title="View Health Records"]]
+Session ID: e1d7b75d3576a2b44e6d2c460fd3e134
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.steps.RedirectionTest.the_user_clicks_on_view_health_records(RedirectionTest.java:50)
+	at ✽.the user clicks on View Health Records(file:///C:/Users/aknanda/eclipse-workspace/Sprint2/Features/HospitalizationRecords.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="Hospitalization Records" name="Validate error message in case of No data available" time="30.938">
+<system-out><![CDATA[Given User is logged-in to Validate error message in case of No data available under Hospitalization records.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects Hospitalization.................................................passed
+Then No Data Available is displayed !!!.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Hospitalization Records" name="Validate the redirection to a particular Hospitalization record" time="27.188">
+<system-out><![CDATA[Given User is logged-in to Validate the redirection to a particular Hospitalization record.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Hospitalization..................................passed
+Then the page is redirected to detailed page for that particular record under Hospitalization records.passed
+]]></system-out>
+</testcase>
+<testcase classname="Hospitalization Records" name="Check the details of a particular Hospitalization record" time="27.327">
+<system-out><![CDATA[Given User is logged-in to Check the details of a particular Hospitalization record.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Hospitalization..................................passed
+Then the page is redirected to detailed page for that particular record.....passed
+And all the details for that record are displayed...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Hospitalization Records" name="Validate redirection to Hospitalization page from a particular record" time="0.002">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given User is logged-in to Validate redirection to Hospitalization page from a particular record.undefined
+And Health Records page is accessible.......................................skipped
+When the user clicks on View Health Records.................................skipped
+And selects a record under Hospitalization..................................skipped
+Then the page is redirected to detailed page for that particular record.....skipped
+And all the details for that record are displayed...........................skipped
+Then click on Back button...................................................skipped
+And the page is redirected to Hospitalization page..........................skipped
+]]></failure>
+</testcase>
+<testcase classname="Insurance Records" name="Valid results of Insurance records till date for the logged-in profile" time="27.962">
+<system-out><![CDATA[Given User is logged-in for Valid results of Insurance records till date for the logged-in profile.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects Insurance.......................................................passed
+Then all the previous Insurance Bills are displayed.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Insurance Records" name="Validate error message in case of No data available" time="28.793">
+<system-out><![CDATA[Given User is logged-in to Validate error message in case of No data available under Insurance Records.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects Insurance.......................................................passed
+Then No Data Available is displayed !!!.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Insurance Records" name="Validate the redirection to a particular Insurance" time="27.425">
+<system-out><![CDATA[Given User is logged-in to Validate the redirection to a particular Insurance.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Insurance........................................passed
+Then the page is redirected to detailed page for that particular Insurance report.passed
+]]></system-out>
+</testcase>
+<testcase classname="Insurance Records" name="Check the details of a particular Insurance report" time="27.535">
+<system-out><![CDATA[Given User is logged-in to Check the details of a particular Insurance report.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................passed
+And selects a record under Insurance........................................passed
+Then the page is redirected to detailed page for that particular Insurance report.passed
+And all the details for that Insurance are displayed........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Insurance Records" name="Validate redirection to Insurance page from a particular record" time="25.203">
+<failure message="element click intercepted: Element &lt;a title=&quot;View Health Records&quot; href=&quot;&quot;&gt;...&lt;/a&gt; is not clickable at point (411, 457). Other element would receive the click: &lt;div aria-hidden=&quot;true&quot; style=&quot;z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;&quot;&gt;&lt;/div&gt;&#10;  (Session info: chrome=99.0.4844.82)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'INLEN8520029331', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [9cc4a8e75a4978b181fd63e1a2dfb0ce, clickElement {id=4fef3162-b98e-49e6-be26-814de4aa1388}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\aknanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:59522}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59522/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (9cc4a8e75a4978b181fd63e1a2dfb0ce)] -&gt; css selector: [title=&quot;View Health Records&quot;]]&#10;Session ID: 9cc4a8e75a4978b181fd63e1a2dfb0ce" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given User is logged-in to Validate redirection to Insurance page from a particular record.passed
+And Health Records page is accessible.......................................passed
+When the user clicks on View Health Records.................................failed
+And selects a record under Insurance........................................skipped
+Then the page is redirected to detailed page for that particular record.....skipped
+And all the details for that record are displayed...........................skipped
+Then click on Back button...................................................skipped
+And the page is redirected to Insurance page................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a title="View Health Records" href="">...</a> is not clickable at point (411, 457). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=99.0.4844.82)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'INLEN8520029331', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9cc4a8e75a4978b181fd63e1a2dfb0ce, clickElement {id=4fef3162-b98e-49e6-be26-814de4aa1388}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\aknanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:59522}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59522/devtoo..., se:cdpVersion: 99.0.4844.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (9cc4a8e75a4978b181fd63e1a2dfb0ce)] -> css selector: [title="View Health Records"]]
+Session ID: 9cc4a8e75a4978b181fd63e1a2dfb0ce
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.steps.RedirectionTest.the_user_clicks_on_view_health_records(RedirectionTest.java:50)
+	at ✽.the user clicks on View Health Records(file:///C:/Users/aknanda/eclipse-workspace/Sprint2/Features/InsuranceRecords.feature:41)
+]]></failure>
+</testcase>
+</testsuite>
